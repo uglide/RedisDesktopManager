@@ -32,6 +32,7 @@ class ServerConfig : public RedisClient::ConnectionConfig
     /* Advanced settings */
     Q_PROPERTY(QString keysPattern READ keysPattern WRITE setKeysPattern)
     Q_PROPERTY(QString namespaceSeparator READ namespaceSeparator WRITE setNamespaceSeparator)
+    Q_PROPERTY(bool namespaceSeparatorIsRegex READ namespaceSeparatorIsRegex WRITE setNamespaceSeparatorIsRegex)
     Q_PROPERTY(uint executeTimeout READ executeTimeout WRITE setExecutionTimeout)
     Q_PROPERTY(uint connectionTimeout READ connectionTimeout WRITE setConnectionTimeout)    
     Q_PROPERTY(bool overrideClusterHost READ overrideClusterHost WRITE setClusterHostOverride)
@@ -58,6 +59,9 @@ public:
 
     QString namespaceSeparator() const;
     void setNamespaceSeparator(QString);
+
+    bool namespaceSeparatorIsRegex() const;
+    void setNamespaceSeparatorIsRegex(bool v);
 
     bool luaKeysLoading() const;
     void setLuaKeysLoading(bool);

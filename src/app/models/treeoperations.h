@@ -35,7 +35,7 @@ class TreeOperations : public QObject,
 
   void resetConnection() override;
 
-  QString getNamespaceSeparator() override;
+  QRegExp getNamespaceSeparator() override;
 
   QString defaultFilter() override;
 

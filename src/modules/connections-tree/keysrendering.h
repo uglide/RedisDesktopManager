@@ -16,7 +16,7 @@ namespace ConnectionsTree {
     public:
         struct RenderingSettigns {
             QRegExp filter;
-            QString nsSeparator;
+            QRegExp nsSeparator;
             uint dbIndex;
             bool sortKeys;
         };
